@@ -1,0 +1,27 @@
+version: "3"
+
+services:
+  my-app:
+    image: katana-app
+    restart: always
+    volumes:
+      - ./:/usr/src/app
+    build:
+      context: ./
+      dockerfile: Dockerfile
+    environment:
+      NODE_ENV: development
+    ports:
+      - 3000:3000
+    command: npm run start:dev
+  katana-mysql:
+    container_name: katana_mysql
+    restart: always
+    image: mysql:5.7
+    environment:
+      - MYSQL_ROOT_PASSWORD=root
+      - MYSQL_USER=katana
+      - MYSQL_PASSWORD=katana
+      - MYSQL_DATABASE=katana
+    ports:
+      - 3331:3306
