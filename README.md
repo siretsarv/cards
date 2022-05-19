@@ -45,7 +45,8 @@ Response:
 
 | Parameter   | Datatype                   | Description                              |
 | ----------- | ---------------------------| ---------------------------------------- |
-| `deckId`    | UUID                       | Possible values (FULL, SHORT) show       |
+| `uuid`      | UUID                       | Deck uuid identifier                     |
+| `id`        | UUID                       | Deck uuid identifier                     |
 | `type`      | string                     | Deck types (FULL, SHORT)                 |
 | `shuffled`  | boolean                    | Deck shuffled or not                     |
 | `remaining` | integer                    | Total cards remaining in deck            |
@@ -54,13 +55,14 @@ Response:
 
 #### Open a deck
 
-GET /deck/{deckId}
+GET /deck/{uuid}
 
 Response:
 
 | Parameter   | Datatype                   | Description                              |
 | ----------- | ---------------------------| ---------------------------------------- |
-| `deckId`    | UUID                       | Possible values (FULL, SHORT) show       |
+| `uuid`      | UUID                       | Deck uuid identifier                     |
+| `id`        | UUID                       | Deck uuid identifier                     |
 | `type`      | string                     | Deck types (FULL, SHORT)                 |
 | `shuffled`  | boolean                    | Deck shuffled or not                     |
 | `remaining` | integer                    | Total cards remaining in deck            |
@@ -69,7 +71,7 @@ Response:
 
 #### Draw a card
 
-GET /deck/{deckId}
+GET /deck/{uuid}
 
 Request:
 
