@@ -1,0 +1,25 @@
+{
+  "development": {
+    "username": "katana",
+    "password": "katana",
+    "database": "katana",
+    "host": "127.0.0.1",
+    "dialect": "mysql",
+    "logging": true,
+    "port": 3331
+  },
+  "test": {
+    "username": "root",
+    "password": null,
+    "database": "database_test",
+    "host": "127.0.0.1",
+    "dialect": "mysql"
+  },
+  "production": {
+    "username": "root",
+    "password": null,
+    "database": "database_production",
+    "host": "127.0.0.1",
+    "dialect": "mysql"
+  }
+}
